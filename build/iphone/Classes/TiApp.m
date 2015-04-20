@@ -178,7 +178,7 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
 
 - (void)boot
 {
-	DebugLog(@"[INFO] %@/%@ (%s.96875c9)",TI_APPLICATION_NAME,TI_APPLICATION_VERSION,TI_VERSION_STR);
+	DebugLog(@"[INFO] %@/%@ (%s.0014f83)",TI_APPLICATION_NAME,TI_APPLICATION_VERSION,TI_VERSION_STR);
 	
 	sessionId = [[TiUtils createUUID] retain];
 	TITANIUM_VERSION = [[NSString stringWithCString:TI_VERSION_STR encoding:NSUTF8StringEncoding] retain];
@@ -187,32 +187,28 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
         NSMutableDictionary *params = [[[NSMutableDictionary alloc] initWithContentsOfFile:filePath] autorelease];
         NSString *host = [params objectForKey:@"host"];
         NSInteger port = [[params objectForKey:@"port"] integerValue];
-
+        NSString *airkey = [params objectForKey:@"airkey"];
         if (([host length] > 0) && ![host isEqualToString:@"__DEBUGGER_HOST__"])
         {
             [self setDebugMode:YES];
             TiDebuggerStart(host, port);
         }
 #if !TARGET_IPHONE_SIMULATOR
-		else
+		else if (([airkey length] > 0) && ![airkey isEqualToString:@"__DEBUGGER_AIRKEY__"])
 		{
-			NSString *airkey = [params objectForKey:@"airkey"];
-			if (([airkey length] > 0) && ![airkey isEqualToString:@"__DEBUGGER_AIRKEY__"])
-			{
-				NSArray *hosts = nil;
-				NSString *hostsString = [params objectForKey:@"hosts"];
-				if (![hostsString isEqualToString:@"__DEBUGGER_HOSTS__"]) {
-					hosts = [hostsString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
-				}
-				TiDebuggerDiscoveryStart(airkey, hosts, ^(NSString *host, NSInteger port) {
-					if (host != nil) {
-						[self setDebugMode:YES];
-						TiDebuggerStart(host, port);
-					}
-					[self appBoot];
-				});
-				return;
+			NSArray *hosts = nil;
+			NSString *hostsString = [params objectForKey:@"hosts"];
+			if (![hostsString isEqualToString:@"__DEBUGGER_HOSTS__"]) {
+				hosts = [hostsString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
 			}
+			TiDebuggerDiscoveryStart(airkey, hosts, ^(NSString *host, NSInteger port) {
+				if (host != nil) {
+					[self setDebugMode:YES];
+					TiDebuggerStart(host, port);
+				}
+				[self appBoot];
+			});
+			return;
 		}
 #endif
     }
@@ -221,32 +217,28 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
         NSMutableDictionary *params = [[[NSMutableDictionary alloc] initWithContentsOfFile:filePath] autorelease];
         NSString *host = [params objectForKey:@"host"];
         NSInteger port = [[params objectForKey:@"port"] integerValue];
-
+        NSString *airkey = [params objectForKey:@"airkey"];
         if (([host length] > 0) && ![host isEqualToString:@"__PROFILER_HOST__"])
         {
             [self setProfileMode:YES];
             TiProfilerStart(host, port);
         }
 #if !TARGET_IPHONE_SIMULATOR
-		else
+		else if (([airkey length] > 0) && ![airkey isEqualToString:@"__PROFILER_AIRKEY__"])
 		{
-			NSString *airkey = [params objectForKey:@"airkey"];
-			if (([airkey length] > 0) && ![airkey isEqualToString:@"__PROFILER_AIRKEY__"])
-			{
-				NSArray *hosts = nil;
-				NSString *hostsString = [params objectForKey:@"hosts"];
-				if (![hostsString isEqualToString:@"__PROFILER_HOSTS__"]) {
-					hosts = [hostsString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
-				}
-				TiProfilerDiscoveryStart(airkey, hosts, ^(NSString *host, NSInteger port) {
-					if (host != nil) {
-						[self setProfileMode:YES];
-						TiProfilerStart(host, port);
-					}
-					[self appBoot];
-				});
-				return;
+			NSArray *hosts = nil;
+			NSString *hostsString = [params objectForKey:@"hosts"];
+			if (![hostsString isEqualToString:@"__PROFILER_HOSTS__"]) {
+				hosts = [hostsString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
 			}
+			TiProfilerDiscoveryStart(airkey, hosts, ^(NSString *host, NSInteger port) {
+				if (host != nil) {
+					[self setProfileMode:YES];
+					TiProfilerStart(host, port);
+				}
+				[self appBoot];
+			});
+			return;
 		}
 #endif
     }

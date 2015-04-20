@@ -836,7 +836,7 @@ bool KrollHasInstance(TiContextRef ctx, TiObjectRef constructor, TiValueRef poss
                     [invocation getReturnValue:&ull];
                     return [NSNumber numberWithUnsignedLongLong:ull];
                 }
-                else if ([attributes hasPrefix:@"TB,"] || [attributes hasPrefix:@"Tb,"])
+                else if ([attributes hasPrefix:@"TB,"])
                 {
                     bool b;
                     [invocation getReturnValue:&b];

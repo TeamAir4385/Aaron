@@ -21,17 +21,17 @@
 
 -(id)version
 {
-	return @"3.5.1";
+	return @"3.5.0";
 }
 
 -(id)buildDate
 {
-	return @"03/05/15 10:08";
+	return @"01/12/15 15:33";
 }
 
 -(id)buildHash
 {
-	return @"96875c9";
+	return @"0014f83";
 }
 
 +(BOOL)shouldRegisterOnInit

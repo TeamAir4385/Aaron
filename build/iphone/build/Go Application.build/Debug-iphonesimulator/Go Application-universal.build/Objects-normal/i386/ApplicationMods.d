@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/ApplicationMods.m \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/ApplicationMods.h
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/ApplicationMods.m \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/ApplicationMods.h

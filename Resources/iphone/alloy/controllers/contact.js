@@ -35,7 +35,7 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.contact = Ti.UI.createWindow({
-        backgroundColor: "#fff",
+        backgroundColor: "#333",
         id: "contact",
         title: "Contact Us"
     });
@@ -45,49 +45,101 @@ function Controller() {
         color: "#600",
         text: "Please feel free to contact us if you are interested or have any questions!",
         top: "15",
-        center: "0",
+        left: "10",
+        right: "10",
         id: "__alloyId1"
     });
     $.__views.contact.add($.__views.__alloyId1);
-    $.__views.textField1 = Ti.UI.createTextArea({
-        id: "textField1",
-        hintText: "First Name",
+    $.__views.lvContainer = Ti.UI.createView({
         top: "65",
-        center: "0",
-        width: "75%",
-        height: "40"
+        width: "280dp",
+        height: Ti.UI.SIZE,
+        layout: "vertical",
+        borderColor: "orange",
+        borderWidth: 0,
+        id: "lvContainer"
     });
-    $.__views.contact.add($.__views.textField1);
-    $.__views.textField2 = Ti.UI.createTextArea({
+    $.__views.contact.add($.__views.lvContainer);
+    $.__views.textField1 = Ti.UI.createTextField({
+        autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+        borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+        autocorrect: false,
+        top: "6dp",
+        left: "4dp",
+        bottom: "2dp",
+        right: "4dp",
+        paddingLeft: "4dp",
+        backgroundColor: "#fff",
+        color: "#000",
+        width: "260dp",
+        height: "40dp",
+        border: 1,
+        borderColor: "#000",
+        id: "textField1",
+        hintText: "First Name"
+    });
+    $.__views.lvContainer.add($.__views.textField1);
+    $.__views.textField2 = Ti.UI.createTextField({
+        autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+        borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+        autocorrect: false,
+        top: "6dp",
+        left: "4dp",
+        bottom: "2dp",
+        right: "4dp",
+        paddingLeft: "4dp",
+        backgroundColor: "#fff",
+        color: "#000",
+        width: "260dp",
+        height: "40dp",
+        border: 1,
+        borderColor: "#000",
         id: "textField2",
-        hintText: "Last Name",
-        top: "105",
-        center: "0",
-        width: "75%",
-        height: "40"
+        hintText: "Last Name"
     });
-    $.__views.contact.add($.__views.textField2);
-    $.__views.textField3 = Ti.UI.createTextArea({
+    $.__views.lvContainer.add($.__views.textField2);
+    $.__views.textField3 = Ti.UI.createTextField({
+        autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+        borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+        autocorrect: false,
+        top: "6dp",
+        left: "4dp",
+        bottom: "2dp",
+        right: "4dp",
+        paddingLeft: "4dp",
+        backgroundColor: "#fff",
+        color: "#000",
+        width: "260dp",
+        height: "40dp",
+        border: 1,
+        borderColor: "#000",
         id: "textField3",
-        hintText: "Emai Address",
-        top: "145",
-        center: "0",
-        width: "75%",
-        height: "40"
+        hintText: "Email Address"
     });
-    $.__views.contact.add($.__views.textField3);
-    $.__views.textField4 = Ti.UI.createTextArea({
+    $.__views.lvContainer.add($.__views.textField3);
+    $.__views.textField4 = Ti.UI.createTextField({
+        autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+        borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+        autocorrect: false,
+        top: "6dp",
+        left: "4dp",
+        bottom: "2dp",
+        right: "4dp",
+        paddingLeft: "4dp",
+        backgroundColor: "#fff",
+        color: "#000",
+        width: "260dp",
+        height: "40dp",
+        border: 1,
+        borderColor: "#000",
         id: "textField4",
-        hintText: "Phone Number",
-        top: "185",
-        center: "0",
-        width: "75%",
-        height: "40"
+        hintText: "Phone Number"
     });
-    $.__views.contact.add($.__views.textField4);
+    $.__views.lvContainer.add($.__views.textField4);
     $.__views.submit = Ti.UI.createButton({
         id: "submit",
         title: "Submit",
+        color: "#fff",
         bottom: "150"
     });
     $.__views.contact.add($.__views.submit);

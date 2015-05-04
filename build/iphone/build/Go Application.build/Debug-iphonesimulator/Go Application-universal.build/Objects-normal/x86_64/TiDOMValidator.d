@@ -1,15 +1,15 @@
 dependencies: \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiDOMValidator.m \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiDOMValidator.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiUtils.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiDimension.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiBase.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiThreading.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiPublicAPI.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiColor.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiProxy.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiEvaluator.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/KrollContext.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiDOMValidator.m \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiDOMValidator.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiUtils.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiDimension.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiBase.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiThreading.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiPublicAPI.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiColor.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiProxy.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiEvaluator.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/KrollContext.h \
   headers/JavaScriptCore/TiCore.h headers/JavaScriptCore/Ti.h \
   headers/JavaScriptCore/TiBase.h headers/JavaScriptCore/TiContextRef.h \
   headers/JavaScriptCore/TiObjectRef.h \
@@ -17,13 +17,13 @@ dependencies: \
   headers/JavaScriptCore/WebKitAvailability.h \
   headers/JavaScriptCore/TiStringRef.h \
   headers/JavaScriptCore/TiStringRefCF.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/KrollCallback.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/KrollObject.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiBindingRunLoop.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/WebFont.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiFile.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiBuffer.h \
-  /Users/Aaron/Documents/Titanium_Studio_Workspace/Derrick-master/build/iphone/Classes/TiBlob.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/KrollCallback.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/KrollObject.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiBindingRunLoop.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/WebFont.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiFile.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiBuffer.h \
+  /Users/Aaron/Documents/Titanium_Studio_Workspace/Aaron/build/iphone/Classes/TiBlob.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/usr/include/libxml2/libxml/tree.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/usr/include/libxml2/libxml/xmlversion.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/usr/include/libxml2/libxml/xmlexports.h \
